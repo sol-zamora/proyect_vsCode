@@ -1,0 +1,130 @@
+/*Para dar estilo a los titulos se debe de colocar el nombre del Id que tenemos definido en html, en este caso es titulo*/
+#titulo{
+    color:chocolate ;
+}
+
+/*Para inidicar que le vamos a utilizar el nombre de una clase para darle estilo es con un "." al inicio y el nombre de la clase
+ejemplo: .texto
+.texto{
+    color: rgb(0, 247, 255);
+}
+si queremos solo aplicar el estilo a una etiqueta en especial debemos indicar la letra "p.texto" 
+p es el nombre de la etiqueta y texto es el nombre de la clase. Lo que indica que le va aplicar el estylo a todas las etiquetas de p que contengan una clase llamada texto*/
+p.texto{
+    color: rgb(0, 255, 106);
+}
+
+p.especial{
+    color: cadetblue;
+}
+
+/*Esta intruccion espara indicar el estilo solo de las etiquetas que estan dentro de un div con nombre p*/
+div p{
+    color: aquamarine;
+}
+
+/*Esto es para indicar que el mismo estilo se le va aplicar a dos etiquetas la h2 y h3 pero que esten dentro de un div*/
+div h2, div h3{
+    color: brown;
+}
+
+/*La siguiente instruccion es para aplicar el stilo a todo el contenido de la pagina
+*{
+    font-size: 25px;
+    color: crimson;
+}*/
+
+/*Hay 3 maneras de indicar colores RGB, hexadecimal(HEX) y utilizando valores HSL */
+/*En el siguiente ejemplo se va asignar el color en hexadecimal el cual inicia siempre con "#" seguida de 6 caracteres ó 3 caracteres
+que puede ser desde 0 hasta F, donde 0 es el minimo color o sea nulo y F el maximo del color*/
+
+/*COLOR UTILIZANDO 3 CARACTERES
+.color{
+    color:#000; Color negro
+    color:#f00; Color rojo intenso
+}*/
+
+/*COLOR UTILIZANDO 6 CARACTERES
+ los dos primeros ceros es equivalente a rojo
+ los otros dos ceros equivalen al verde 
+ y los ultimos dos ceros equivalen al azul
+
+.color{
+    color:#ff0000;
+}*/
+
+/*Ahora va la conversion de RGB
+en esta conversion se indican valores del 0 al 255
+siendo el primer valor = rojo, segundo= verde y tercero=azul
+color:rgb(255,0,0); = color rojo
+color:rgb(0,255,0); = color verde
+color:rgb(0,0,255); = color azul
+Se pueden hacer muchas convinaciones con esta conversion al igual que la anterior
+
+.color{
+    color:rgb(255,0,0);
+}
+*/
+
+/*
+Para indicar el boder se utiliza la propiedad border: seguido del grosor del borde, el color y el tipo de borde
+solid = es una linea solida sin espacios
+dotted = punto separados
+dashed = linea puntiada
+double = doble linea
+groove = linea como en 3d
+ridge = Muy parecida a la anterior
+inset = Coloca linea grusa con sombras, en la parte superior - Se ve bonito
+outsed = Coloca linea grusa con sombras, en la parte inferior
+none = sin ningun borde
+*/
+.color{
+    /* border:5px coral inset; */
+    border-style: groove; /*style del borde*/
+    border-color:brown; /*El color del borde*/
+    border-radius: 5px; /*El grosor del borde*/
+    border-width: 5px; /*El ancho del borde*/
+}
+
+/*Los valores de rgba: el primero color rojo, segundo verde, tercero azul y el cuarto el nivel de opasidad que va tener
+ rgba(255,0,0,1); esta valor la puede tener cualquier propiedad que sea de color*/
+#fondo{
+    background-color: rgb(236, 236, 231); /*Este es para pasarle el color que va tener pero con opasidad es decir diluido*/
+    /* opacity: 0.5; */
+    /* background-image: url("coffee.jpeg"); */
+    height: 100px; /*esto es para dar el tamaño de la imagen*/
+    /*cover es para mantener la imagen a su tamaño dentro del tamaño que le estamos dando, esto sirve para que se vaya adaptando al tamaño de la pantalla
+    el de auto no lo hace, ni el de contain*/
+    /* background-size: cover; */
+    /*background-size: 300px 300px; Esta es para la dimension de la imagen la cual debe ser igual al tamaño del heigth*/
+    /*background-repeat:no-repeat; Esto es para que la imagen no se repita */
+    /* background-repeat: repeat-x; Esto es para que se repita de manera horizontal*/
+    /* background-repeat: repeat-y; Esto es para que se repita vertical */
+    /* background-position: center center; Posicion de la imagen puede ser top, center, bottom */ 
+
+    /*Ahora para indicar todo lo anterior en una misma linea es de la siguiente manera*/
+    background: #f00 url("coffee.jpeg") repeat-y center center /300px 300px;
+}
+
+.margen{
+    background-color: chocolate;
+    /* margin:15px 20px 25px 30px; el primero es el margen de arriba, el segundo es el de la derecha, tercero el de abajo y el cuarto es el de la izquierda */
+    /*Si queremos que el margen tenga los mismos valores en en todos los lados, solo se le pasa el valor una ves*/
+    margin: 15px;
+    /* padding: 30px 25px 20px 30px; El padding es para agregar espacios dentro del elemento */
+    /*Lo mismo se puede hacer con el padding, si le pasamos dos valores toma el horizontal con el primero y el vertical como el segundo*/
+    padding: 30px 20px;
+    border: solid 1px black;  /*El border es para darle el estilo a los bordes que queremos tener*/
+    height: 300px; /*Este es para la altura de nuestro margen*/
+    width: 50px; /*El width es para darle lo ancho que va tener el margen*/
+    overflow: scroll; /*El overflow es para indicar que todo lo que este dentro del margen que no alcanze a mostrarse dentro que lo oculte con la opcion de hidden*
+                        le podemos pasar como valor tambien un scroll para que se pueda navegar dentro del elemento: valores que tiene el overflow: hidden, scroll y visible*/
+    outline: 1px solid red; /*El outline es para indicar el color del margen y su grosor*/    
+}
+
+.texto{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;  /*Este text-align es para alinear el texto, en la posicion que desemos*/
+    text-decoration: overline; /*overline es para colocarle una linea arriba del texto*/
+    text-shadow: 3px 5px 5px blue; /*shadow es para dar una sombra y sus valores que queremos que tenga la sombra, el tamaño que va tener la sombre del texto, con su color de sombra*/
+}
