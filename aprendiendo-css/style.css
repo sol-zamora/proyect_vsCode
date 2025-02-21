@@ -28,11 +28,11 @@ div h2, div h3{
     color: brown;
 }
 
-/*La siguiente instruccion es para aplicar el stilo a todo el contenido de la pagina
+/*La siguiente instruccion es para aplicar el stilo a todo el contenido de la pagina*/
 *{
     font-size: 25px;
-    color: crimson;
-}*/
+    /*color: crimson;*/
+}
 
 /*Hay 3 maneras de indicar colores RGB, hexadecimal(HEX) y utilizando valores HSL */
 /*En el siguiente ejemplo se va asignar el color en hexadecimal el cual inicia siempre con "#" seguida de 6 caracteres ó 3 caracteres
@@ -123,8 +123,33 @@ none = sin ningun borde
 }
 
 .texto{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Sigmar", serif;/*, sans-serif; Verdana, Geneva, Tahoma, sans-serif; se remplazo por la fuente que obtuvimos de google fonts*/
     text-align: center;  /*Este text-align es para alinear el texto, en la posicion que desemos*/
     text-decoration: overline; /*overline es para colocarle una linea arriba del texto*/
-    text-shadow: 3px 5px 5px blue; /*shadow es para dar una sombra y sus valores que queremos que tenga la sombra, el tamaño que va tener la sombre del texto, con su color de sombra*/
+    text-shadow: 3px 5px 5px blue; /*shadow es para dar una sombra, el primer valor cuanto se va mover a la derecha la sombra, el segundo cuanto se va morrer hacia bajo la sombra, el tercero es para agregar la cantidad de sombre que queremos que tenga la sombra y el color que va tener la sombra*/
+}
+
+/*El siguiente codigo es para indicarle a css que color indicarle al link si aun no ha sido visitado*/
+a:link{
+    color: rgb(55, 0, 255);
+}
+
+/*El siguiente selector es para indicar que el link ya fue visitado*/
+a:visited{
+    color:rgb(107, 159, 189);
+}
+/*El selector de hover es cuando es el estado del link cuando se esta pasando el mouse por encima*/
+a:hover{
+    color:yellow;
+}
+ /*El de active es cuando se esta pinchando el link*/
+a:active{
+    color:red;
+}
+/*La siguiente intruccion es para darle formato a las listas*/
+ul{
+    background-color: cyan; /*Se les puede agregar un color*/
+    /*list-style-type: none; Si utilizamos un list style-type es para quitar los puntos que aparecen al inicio de las listas*/
+    /*padding-left: 0; Esto es para indicar que la lista no quiero que tenga un espacio al inicio*/
+    list-style-position:inside; /*Esta es para posicionar los puntos al mismo nivel que los parrafos*/
 }
