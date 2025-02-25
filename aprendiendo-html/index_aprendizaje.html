@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Con estas lineas se crean los comentarios-->
+    <!--El title es para colocar el nombre que va contener la pestaña de nuestra pagina-->
+   <title>Bienvenidos a mi web</title>
+   <style>
+        table, th, td{
+            border: 1px solid black;
+        }
+   </style>
+</head>
+<body>
+    <!--Para crear una tabla es con la etiqueta table-->
+    <table style="width: 500px;">
+        <!--thead es para establecer la cabecera dentro de nuestra tabla y tener todo mas ordenado-->
+        <thead>
+            <!--tr quiere decir table row o una fila dentro de nuestra tabla-->
+            <tr>
+                <!--th es para indicar una cabecera dentro de nuestra tabla-->
+                <th>Producto</th>
+                <th>Precio</th>            
+            </tr>
+        </thead>
+        <!--tbody es para indicar el cuerpo que va tener nuestra tabla en este caso las filas-->
+        <tbody>
+            <tr>
+                <!--td es para definir los valores que va tener nuestra tabla en sus filas-->
+                <td>laptop</td>
+                <td>29,000</td>
+            </tr>
+            <tr>
+                <td>teclado</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>celular iphon</td>
+                <td>35,000</td>
+            </tr>
+        </tbody>
+        <!--el tfoot es para indicar el resumen que va tener nuestra tabla al final-->        
+        <tfoot>
+            <td></td>
+            <td>Total: $64,200.00</td>
+
+        </tfoot>
+    </table>
+    <!--Ul es lista no ordenada-->
+    <ul>
+        <!--li quiere decir elementos de la lista-->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+    <!--ol quiere decir lista ordenada
+        Para indicar en que numero queremos que inicie nuestra lista es con value=" ", si no se le indica el value inicia con 1-->
+    <ol>
+        <li value="50">Elemento 5</li>
+        <li>Elemento 6</li>
+        <li>Elemento 7</li>
+        <li>Elemento 8</li>
+        <li>
+            <ol>
+                <!--El estilo list-stype-type:lower-alpha es para que la lista inicie ordenada por letras y no con numeros-->
+                <li style="list-style-type: lower-alpha;">Subelemento 1</li>
+                <li style="list-style-type: lower-alpha;">Subelemento 2</li>
+                <li style="list-style-type: lower-alpha;">Subelemento 3</li>
+                <li style="list-style-type: lower-alpha;">Subelemento 4</li>
+            </ol>
+        </li>
+    </ol>
+    <!--Para crear un formulario dentro de nuestra pagina es con la etiqueta form-->
+    <form action="/formulario" method="post">
+        <label for="nombre">nombre</label>        
+        <!--input sirve para ingresar un cuadro de texto editable, para que el usuario ingrese informacion-->
+        <input value="sol" type="text" id="nombre" name="nombre" placeholder="Ingresar nombre" />
+        <br>
+        <br>
+        <label for="apellido">Apellido</label>
+        <input value="zamora" type="text" id="apellido" name="apellido" placeholder="Ingresa apellido" />
+        <br>
+        <br>
+        <label for="comentario">Comentario:</label>
+        <textarea cols="50" rows="10" id="comentario" name="comentario" placeholder="Ingresa un comentario">es un valor por defecto</textarea>
+        <br>
+        <input type="submit" />
+        <!--En las etiquetas de button se puede personalizar como lo quieramos que una etiqueta de input-->
+        <button type="button">Tipo boton</button> <!--Boton que se le indicar que actividad va ser-->
+        <button type="reset">Tipo reset</button><!--Boton que resetea el formulario a como estaba inicialmente-->
+        <button type="submit">Tipo submit</button><!--Boton que se le debe indicar hacia donde va enviar el formulario-->
+    </form>
+    <!--Las etiquetas de h1 es para colocar el titulo que va contener nuestra web dentro-->
+    <h1>Mi primer heading</h1>
+    <!--El h2 es para indicar los subtitulos de los titulos-->
+    <h2>Mi segundo heading</h2> 
+    <!--las siguientes h3, h4, h5,h6, h7 se utilzan para mas titulos o subtitulos, pero los va haciendo mas pequeños las letras, estas letras no se deben de utilizar como otra cosa que no sea un tituto o subtitulo-->
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quito heading</h5>
+    <!--La letra p es para colocar un parrafo por eso es p, ahi podemos colocar lo que quieramos-->    
+    <p>chanchito feliz como una lombris ya que es muy feliz</p>
+    <p>muy feliz muy feliz</p>
+    <!--La etiqueta de hr sive para poder separa las secciones de nuestra aplicacion, colocando una linea para la separación-->
+    <hr>
+    <h2>Mi segundo subtitulo</h2>
+    <!--La etiqueta span es para hacer referencia a un texto que esta dentro de una etiqueta, en la cual podemos restar la informacion que esta dentro de la etiqueta span.
+        Para poder hacer un salto de linea, porque el texto escrito es muy grande es con la etiqueta <br> -->
+    <p>Texto un poco mas, este texto es mucho <span style="color: blue;"> y sirve para que el texto no <br>se vea alterado</span> cuando se 
+        le muestra al usuario con span</p>
+    <!--La etiqueta de a nos sirve para los link para ir a otras paginas, la cual se debe de indicar la url a la que se va hacer referencia
+        Para abrir la url en otra pagina nueva y que no quite nuestra pagina debemos colocarle target="_blank" asi abrira el link en una nueva pagina
+    -->    
+    <a target="_blank" href="https://www.google.com.mx">Ir a google</a>
+    <!--Para colocar una imgen en nuestra pagina es con la etiqueta img la cual se cierra con / nada mas, se le debe pasar la url en donde va estar la imagen-->
+    <img src="img/coffee.jpeg" width="400" height="400"/>
+    <!--Dentro de form nosotros vamos a indicar el contenido que va tener nuestro formulario-->
+    
+</body>
+</html>

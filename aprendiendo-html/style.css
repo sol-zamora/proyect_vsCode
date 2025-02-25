@@ -1,0 +1,66 @@
+html{
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    margin: 0;
+    background-color: #d1cece;
+}
+
+header{
+    background-color: #363636; 
+    color: white;
+    padding: 3rem 2rem;
+}
+
+header h1{
+    font-size: 4rem; /*El 4rem es igual a 4x16 */
+    text-align: center;
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;    
+}
+
+section article{
+    /*Este transition sirve para indicar el tiempo en que queremos que se muestre la sombra cuando va pasando el mouse*/
+    transition: box-shadow 0.3s ease; /*ease se puede cambiar por otro valor*/
+    background-color: #ebe5e5; /*Es el color que va tener el articulo*/
+    margin: 1rem 0; /*Este el margen que van a tener nuestros articulos*/
+    border-radius:0.5rem; /*Es el grosor del borde del articulo*/
+    padding: 0.25rem 0; /*El padding es la separacion que va tener articulo de los otros*/
+    cursor: pointer; /*este cursor:pointer es para mostrar la mano en el cursor*/
+}
+
+section article:hover{
+    /*indica que la sombra se va desplazar a la derecha 0, hacia abajo un 0.1rem, el grosor de la sombra va ser de 0.4rem y va tener un color negro pero tenue*/
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.5); 
+}
+
+section article h2, section article p{
+    margin: 1rem;
+}
+
+footer{
+    background-color: #363636;
+    padding: 3rem;
+    color: white;
+}
+
+footer section{
+    float: right;
+}
+
+footer p{
+    margin: 0;
+}
+footer a{
+    transition: color 0.3seg ease; /*Esto es para la animacion de los link, para que se vea como se convierte en una sombra*/
+    color: white;
+    text-decoration: none;/*Se le quita la decoracion a los link*/
+}
+
+footer a:hover{
+    color:rgb(113, 121, 138);
+}
