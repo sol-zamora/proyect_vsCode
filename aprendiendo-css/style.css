@@ -149,7 +149,99 @@ a:active{
 /*La siguiente intruccion es para darle formato a las listas*/
 ul{
     background-color: cyan; /*Se les puede agregar un color*/
-    /*list-style-type: none; Si utilizamos un list style-type es para quitar los puntos que aparecen al inicio de las listas*/
+    list-style-type:lower-alpha; /*Si utilizamos un list style-type es para quitar los puntos que aparecen al inicio de las listas, o elegir el tipo de puntos que se le va asignar a la lista*/
     /*padding-left: 0; Esto es para indicar que la lista no quiero que tenga un espacio al inicio*/
-    list-style-position:inside; /*Esta es para posicionar los puntos al mismo nivel que los parrafos*/
+    /*list-style-position:inside; Esta es para posicionar los puntos al mismo nivel que los parrafos*/
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;  /*el border collapse es para quitar el espacio entre las columnas que se crea en las tablas*/
+}
+
+/*El siguiente codigo es para darle formato a las cabeceras, a las columnas y filas*/
+th,td{
+    border: solid 1px #eee; 
+    padding: 5px;          
+}
+/*El siguiente codigo es para darle formato a las cabeceras*/
+th{
+    background-color:red;
+    color: white;
+    text-align: left;    
+}
+
+/*El siguiente codigo es para indicar el color que van a tener las columnas que son inpares y cuales las que son pares, al momento de pasar el mouse
+se le debe pasar el argumento de even que es igual a impar*/
+tr:nth-child(even){
+    background-color: #eee;
+}
+
+/*El siguiente codigo es para darle color a las celdas cuando se pase el mouse sobre ella*/
+tr:hover{
+    background-color: #aaa; /*El color que le estamos asignando es el gris*/    
+    cursor: pointer; /*cursor: pointer se utilizar para poner un icono de la manita en el mouse para indicar que puede dar clic*/
+}
+
+/*Cuando se utiliza la etiqueta de div lo que hace es utilizar todo el ancho de la ventana y hace salto de linea cuando se coloca otro div a un lado
+La etiqueta de span lo que hace es solo colocar el valor del span junto al otro span, sin hacer salto de linea*/
+span{
+    display: block; /*cuando se le coloca a el span display: block se genera un salto de linea*/
+    /* display: none;El display: none es para ocultar los elementos que queremos que no se muestren */
+    /* visibility: hidden; con visibility:hidden es para ocultar los elementos aun que si se deja su espacio */
+    max-width: 600px;
+    /* max-width: 300px; */
+    background-color: red;
+}
+
+.inline{
+    display:inline;
+}
+
+/*El siguiente codigo de posicion es para  indicar la posicion en la que va estar el elemento*/
+#position{
+    /* position:relative; Esta es la posicion que va tomar el elemento de manera fija */
+    /* position:fixed; Este position:fixed es para que el elemento se mueva junto con el scroll */
+    position: sticky; /*Se queda posicionado al elemento mas cercano, pero si se le agrega un top:25 se empieza a mover el elemento*/
+    left: 20px; /*El left 20px indica a que distancia va estar de lado izquierdo */
+    top: 25px;
+}
+
+/*El float: left es para hacer flotar el texto a la izquierda*/
+.left{
+    float:left;
+    width:200px;
+    height: 200px;
+}
+
+/*El float: right es para hacer flotar el texto a la derecha*/
+.right{
+    float:right;
+}
+
+.container{
+    height: 200px;
+}
+
+/*Este es para crear columnas, pero utilizando un tamaño en especifico para cada columna utilizando porcentajes*/
+.column{
+    /* border:solid 1px #ddd;
+    border-radius: 5px; */
+    margin: 0;
+    padding: 10px 0px;
+    width: 33.3%;
+}
+
+.inline-block{
+    display: inline-block; /*si se utiliza solo inline, no se puede aplicar la propiedad de width ni la de height y con inline-block si, inline-block se utiliza para generar menus, ya sea que se encuentren en la derecha o izq.*/
+    height: 55px;
+    background-color: #f00;
+}
+
+.center{
+    padding: 50px 0; /*El padding 50px es para que se centre de manera vertical y 0 no horizontal*/
+    text-align: center; /*con text-align se centra el texto*/
+    width: 200px;
+    margin: 0 auto; /* cero para que no aparesca centrado vericalmente*/
+    background-color: aqua;
 }
